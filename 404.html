@@ -6,11 +6,12 @@
   <title>Emi Auto – lietotās auto detaļas</title>
   <meta name="description" content="Emi Auto – lietotas auto detaļas. Mājaslapa tiek atjaunota. Pasūtiet pa telefonu vai rrr.lt.">
   <style>
-    :root { --red:#DF0020; --red-dark:#b80019; --black:#111111; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e6e6; --gray:#f4f4f4; --white:#ffffff; }
+    :root { --accent:#B80019; --accent-dark:#8f0014; --black:#111111; --ink:#1a1a1a; --muted:#5c5c5c; --gray-logo:#707070; --line:#e2e2e2; --gray:#f4f4f4; --white:#ffffff; }
     * { box-sizing:border-box; }
     html, body { margin:0; padding:0; }
     body { background:var(--white); color:var(--ink); font-family:-apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height:1.5; }
-    a { color:var(--red); }
+    a { color:var(--accent); }
+    a:focus-visible, .btn:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
     .wrap { max-width:1040px; margin:0 auto; padding:0 16px; }
 
     .top { background:var(--white); }
@@ -18,19 +19,19 @@
     .logo { height:58px; width:auto; display:block; }
     .top-phones { display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-end; }
     .top-phones a { color:var(--ink); text-decoration:none; font-weight:700; white-space:nowrap; }
-    .top-phones a span { color:var(--red); margin-right:6px; }
+    .top-phones a span { color:var(--gray-logo); margin-right:6px; }
 
-    .redbar { background:var(--red); color:#fff; font-size:14px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
-    .redbar .wrap { padding:11px 16px; display:flex; gap:10px 28px; flex-wrap:wrap; justify-content:center; }
+    .infobar { background:var(--gray); color:var(--muted); font-size:14px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .infobar .wrap { padding:11px 16px; display:flex; gap:10px 28px; flex-wrap:wrap; justify-content:center; }
 
-    .hero { background:var(--black); color:#fff; background-image:linear-gradient(135deg, #1a1a1a 0%, #111 55%, #2a0a0e 100%); }
+    .hero { background:var(--black); color:#fff; background-image:linear-gradient(135deg, #202020 0%, #141414 60%, #0f0f0f 100%); }
     .hero .wrap { padding:56px 16px 60px; text-align:center; }
     .hero h1 { font-size:34px; line-height:1.2; margin:0 0 14px; }
     .hero p { font-size:18px; color:#d9d9d9; max-width:720px; margin:0 auto 26px; }
     .btns { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
     .btn { display:inline-block; padding:14px 24px; border-radius:6px; font-weight:700; text-decoration:none; font-size:16px; border:2px solid transparent; }
-    .btn-red { background:var(--red); color:#fff; border-color:var(--red); }
-    .btn-red:hover { background:var(--red-dark); border-color:var(--red-dark); }
+    .btn-accent { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .btn-accent:hover { background:var(--accent-dark); border-color:var(--accent-dark); }
     .btn-outline { color:#fff; border-color:#fff; }
     .btn-outline:hover { background:#fff; color:var(--black); }
 
@@ -38,12 +39,12 @@
     .contacts .wrap { padding:44px 16px 36px; }
     .cards { display:grid; grid-template-columns:1fr; gap:16px; }
     @media (min-width:720px) { .cards { grid-template-columns:repeat(3, 1fr); } }
-    .card { background:#fff; border:1px solid var(--line); border-top:4px solid var(--red); border-radius:8px; padding:20px 20px 16px; }
-    .card h2 { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--red); margin:0 0 10px; }
+    .card { background:#fff; border:1px solid var(--line); border-top:3px solid var(--gray-logo); border-radius:8px; padding:20px 20px 16px; }
+    .card h2 { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 10px; }
     .card p { margin:0 0 6px; }
     .card a { color:var(--ink); text-decoration:none; font-weight:600; }
-    .card a:hover { color:var(--red); }
-    .social a { margin-right:14px; color:var(--red) !important; }
+    .card a:hover { color:var(--accent); }
+    .social a { margin-right:14px; color:var(--accent) !important; text-decoration:underline; text-underline-offset:3px; }
     .lang { margin-top:22px; color:var(--muted); font-size:14px; }
     .lang p { margin:0 0 6px; }
 
@@ -55,7 +56,7 @@
     .grant { display:grid; grid-template-columns:1fr; gap:18px; align-items:center; }
     @media (min-width:720px) { .grant { grid-template-columns:300px 1fr; } }
     .grant img { width:100%; max-width:300px; height:auto; display:block; }
-    .grant p { margin:0 0 8px; font-size:12.5px; line-height:1.5; color:#bdbdbd; }
+    .grant p { margin:0 0 8px; font-size:13px; line-height:1.5; color:#bdbdbd; }
     .grant strong { color:#fff; }
     .copy { border-top:1px solid #2a2a2a; margin-top:24px; padding-top:16px; font-size:13px; color:#9a9a9a; text-align:center; }
   </style>
@@ -71,7 +72,7 @@
     </div>
   </header>
 
-  <div class="redbar">
+  <div class="infobar">
     <div class="wrap">
       <span>Lietotas auto detaļas</span>
       <span>Svētciems, Limbažu novads</span>
@@ -84,7 +85,7 @@
       <h1>Top jauna un ērtāka mājaslapa!</h1>
       <p>Mēs pilnveidojam savu mājaslapu, lai sniegtu jums vēl ērtāku iepirkšanās pieredzi. Tikmēr visas mūsu detaļas atrodamas rrr.lt, un vienmēr esam pieejami pa tālruni. Droši zvaniet, palīdzēsim izvēlēties un pasūtīt!</p>
       <div class="btns">
-        <a class="btn btn-red" href="https://rrr.lt/lv/pardevejs/emiauto">Mūsu detaļas rrr.lt &rarr;</a>
+        <a class="btn btn-accent" href="https://rrr.lt/lv/pardevejs/emiauto">Mūsu detaļas rrr.lt &rarr;</a>
         <a class="btn btn-outline" href="tel:+37127782484">Zvanīt 27782484</a>
         <a class="btn btn-outline" href="tel:+37129227059">Zvanīt 29227059</a>
       </div>
